@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Chakra Petch', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    background-color: #0d0f12;
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom rack hardware brushed textures and finishes */
+.rack-metal {
+  background: linear-gradient(180deg, #1f2329 0%, #15181d 50%, #111317 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.8), 0 10px 30px -5px rgba(0, 0, 0, 0.7);
+}
+
+.rack-ear {
+  background: linear-gradient(90deg, #15181c 0%, #1c2026 50%, #14171a 100%);
+}
+
+.rack-groove {
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.9), 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.led-amber {
+  color: #ff9e00;
+  text-shadow: 0 0 8px rgba(255, 158, 0, 0.6), 0 0 16px rgba(255, 158, 0, 0.3);
+}
+
+.led-cyan {
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.6), 0 0 16px rgba(56, 189, 248, 0.3);
+}
+
+.led-green {
+  color: #22c55e;
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.6), 0 0 16px rgba(34, 197, 94, 0.3);
+}
+
+.led-screen-bezel {
+  background: #06080a;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.9), inset 0 0 1px rgba(255,255,255,0.1), 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Subtle scanlines effect on LED display */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
+
+/* Hex screw visual */
+.hex-screw {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2d333b 0%, #15191e 80%, #0d1013 100%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25), 0 2px 4px rgba(0, 0, 0, 0.6);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-screw::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #090a0c;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.9);
+}

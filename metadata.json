@@ -1,0 +1,7 @@
+{
+  "name": "RackSynth - Minimalist Hardware Synthesizer",
+  "description": "Minimalist rack-mount synthesizer interface featuring 8 rotary encoders, 2 toggle switches, real-time LED display, and Web MIDI support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
